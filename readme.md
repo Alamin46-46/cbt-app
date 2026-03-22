@@ -9,3 +9,11 @@ How to Run the Project
 Install Flask: pip install flask
 Run the application: python app.py
 Open your browser and go to: http://127.0.0.1:5000/
+
+Technologies Used
+
+Python
+Flask
+HTML/CSS
+datetime module
+Git & GitHub
