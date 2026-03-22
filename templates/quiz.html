@@ -9,22 +9,26 @@
 <h1>Mini CBT Test</h1>
 
 <div class="container">
-<form method="POST">
-    {% for q in questions %}
-        <p>{{ q.text }}</p>
-
-        {% set q_index = loop.index0 %}
-
-        {% for option in q.options %}
-            <div class="option">
-                <input type="radio" name="q{{ q_index }}" value="{{ option }}" required>
-                {{ option }}
+    <form method="POST">
+        {% for q in questions %}
+            <div class="container">
+                <h2>{{ q.text }}</h2>
+    
+                {% set q_index = loop.index0 %}
+    
+                <div class="options-row">
+                    {% for option in q.options %}
+                        <label class="option">
+                            <input type="radio" name="q{{ q_index }}" value="{{ option }}" required>
+                            {{ option }}
+                        </label>
+                    {% endfor %}
+                </div>
             </div>
         {% endfor %}
-    {% endfor %}
-
-    <button type="submit">Submit</button>
-</form>
+    
+        <button type="submit">Submit Test</button>
+    </form>
 </div>
 
 </body>
