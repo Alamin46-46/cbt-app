@@ -2,9 +2,17 @@
 <html>
 <head>
     <title>Mini CBT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Welcome to Mini CBT System</h1>
-    <a href="/quiz">Start Test</a>
+
+<h1>Welcome to Mini CBT System</h1>
+
+<div class="container">
+    <a href="/quiz">
+        <button>Start Test</button>
+    </a>
+</div>
+
 </body>
 </html>
