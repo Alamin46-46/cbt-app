@@ -10,24 +10,30 @@
 
 <div class="container">
     <form method="POST">
-        {% for q in questions %}
-            <div class="container">
-                <h2>{{ q.text }}</h2>
+        <div class="container">
     
-                {% set q_index = loop.index0 %}
+            {% for q in questions %}
+                <div class="question">
+                    
+                    <h3>Q{{ loop.index }}. {{ q.text }}</h3>
     
-                <div class="options-row">
-                    {% for option in q.options %}
-                        <label class="option">
-                            <input type="radio" name="q{{ q_index }}" value="{{ option }}" required>
-                            {{ option }}
-                        </label>
-                    {% endfor %}
+                    {% set q_index = loop.index0 %}
+    
+                    <div class="options-row">
+                        {% for option in q.options %}
+                            <label class="option">
+                                <input type="radio" name="q{{ q_index }}" value="{{ option }}" required>
+                                {{ option }}
+                            </label>
+                        {% endfor %}
+                    </div>
+    
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
     
-        <button type="submit">Submit Test</button>
+            <button type="submit">Submit Test</button>
+    
+        </div>
     </form>
 </div>
 
