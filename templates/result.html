@@ -2,15 +2,20 @@
 <html>
 <head>
     <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
 <h1>Test Result</h1>
 
-<p>Your Score: {{ score }} / {{ total }}</p>
-<p>Submitted at: {{ time }}</p>
+<div class="container">
+    <p>Your Score: {{ score }} / {{ total }}</p>
+    <p>Submitted at: {{ time }}</p>
 
-<a href="/">Go Home</a>
+    <a href="/">
+        <button>Go Home</button>
+    </a>
+</div>
 
 </body>
 </html>
