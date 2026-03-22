@@ -2,11 +2,13 @@
 <html>
 <head>
     <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-<h1>Answer Questions</h1>
+<h1>Mini CBT Test</h1>
 
+<div class="container">
 <form method="POST">
     {% for q in questions %}
         <p>{{ q.text }}</p>
@@ -14,15 +16,16 @@
         {% set q_index = loop.index0 %}
 
         {% for option in q.options %}
-            <input type="radio" name="q{{ q_index }}" value="{{ option }}" required>
-            {{ option }}<br>
+            <div class="option">
+                <input type="radio" name="q{{ q_index }}" value="{{ option }}" required>
+                {{ option }}
+            </div>
         {% endfor %}
-
-        <br>
     {% endfor %}
 
     <button type="submit">Submit</button>
 </form>
+</div>
 
 </body>
 </html>
