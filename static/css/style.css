@@ -43,3 +43,10 @@ button:hover {
     gap: 20px;
     margin-top: 15px;
 }
+
+.option {
+    background: #334155;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
