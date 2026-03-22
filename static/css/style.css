@@ -40,16 +40,20 @@ button:hover {
 
 .options-row {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* THIS is the key change */
     gap: 20px;
-    margin-top: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .option {
     background: #334155;
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-radius: 6px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .question {
